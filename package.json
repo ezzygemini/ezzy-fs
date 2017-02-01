@@ -1,0 +1,14 @@
+{
+  "name": "fs-plus",
+  "description": "An enhancement to the basic fs library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezzygemini/fs-plus.git"
+  },
+  "license": "MIT",
+  "version": "0.1.0",
+  "dependencies": {
+    "humanize": "0.0.9",
+    "object-sizeof": "^1.1.1"
+  }
+}
