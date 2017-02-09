@@ -12,12 +12,12 @@ const promisify = (method, args) => new Promise((resolve, reject) => {
 });
 
 /**
- * @param {string} rawFile The raw file to be read. The path is normalized.
+ * Exposure to the normalize method of path. This avoids an extra dependency.
+ * @method normalize
+ * @memberOf fs
  */
-fs.readFilePromise = rawFile => new Promise((resolve, reject) => {
-  fs.readFile(path.normalize(rawFile), (e, content) =>
-    e ? reject(e) : resolve(content));
-});
+path.normalize = fs.normalize;
+
 
 let methodName;
 [
