@@ -16,7 +16,7 @@ const promisify = (method, args) => new Promise((resolve, reject) => {
  * @method normalize
  * @memberOf fs
  */
-path.normalize = fs.normalize;
+fs.normalize = (...args) => path.normalize.apply(path, args);
 
 
 let methodName;
