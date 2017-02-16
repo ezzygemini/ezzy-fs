@@ -12,6 +12,14 @@ const promisify = (method, args) => new Promise((resolve, reject) => {
 });
 
 /**
+ * Turns an fs function into a promise without failing.
+ * @param {string} method The name of the method to use.
+ * @param {[*]} args Any number of arguments sent to the function.
+ */
+const promisifyNoFail = (method, args) => new Promise(resolve =>
+  fs[method].apply(fs, [].concat(args, out => resolve(out))));
+
+/**
  * Exposure to the normalize method of path. This avoids an extra dependency.
  * @method normalize
  * @memberOf fs
@@ -879,7 +887,13 @@ let methodName;
   methodName = `${method}Promise`;
 
   if (!fs[methodName]) {
-    fs[methodName] = (...args) => promisify(method, args);
+    switch (methodName) {
+      case 'exists':
+        fs[methodName] = (...args) => promisifyNoFail(method, args);
+        break;
+      default:
+        fs[methodName] = (...args) => promisify(method, args);
+    }
   }
 
 });
