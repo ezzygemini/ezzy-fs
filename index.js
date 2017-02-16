@@ -887,7 +887,7 @@ let methodName;
   methodName = `${method}Promise`;
 
   if (!fs[methodName]) {
-    switch (methodName) {
+    switch (method) {
       case 'exists':
         fs[methodName] = (...args) => promisifyNoFail(method, args);
         break;
