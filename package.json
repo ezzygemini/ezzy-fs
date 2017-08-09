@@ -7,8 +7,14 @@
   },
   "license": "MIT",
   "version": "0.1.0",
+  "scripts": {
+    "test": "node ./node_modules/testing"
+  },
   "dependencies": {
     "fs": "0.0.1-security",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "testing": "github:ezzygemini/testing"
   }
 }
