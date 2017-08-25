@@ -1,20 +1,20 @@
 {
-  "name": "fs-plus",
+  "name": "ezzy-fs",
   "description": "An enhancement to the basic fs library",
   "repository": {
     "type": "git",
     "url": "https://github.com/ezzygemini/fs-plus.git"
   },
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
-    "test": "node ./node_modules/testing"
+    "test": "node ./node_modules/ezzy-testing"
   },
   "dependencies": {
     "fs": "0.0.1-security",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "testing": "github:ezzygemini/testing"
+    "ezzy-testing": "^0.1.2"
   }
 }
