@@ -1,4 +1,6 @@
 # ezzy-fs
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ezzygemini/ezzy-fs.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/ezzygemini/ezzy-fs.svg?branch=master)](https://travis-ci.org/ezzygemini/ezzy-fs)
 [![Coverage Status](https://coveralls.io/repos/github/ezzygemini/ezzy-fs/badge.svg?branch=master)](https://coveralls.io/github/ezzygemini/ezzy-fs?branch=master)
 
