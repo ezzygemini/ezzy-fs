@@ -21,6 +21,6 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ezzy-testing": "^0.1.21"
+    "ezzy-testing": "^0.1.27"
   }
 }
